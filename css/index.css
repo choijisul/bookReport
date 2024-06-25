@@ -1,0 +1,46 @@
+.nanum-gothic-regular {
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/*글꼴*/
+
+body {
+    background-color: #E9EFDE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.bookicon {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #60734A;
+    color: white;
+    border: none;
+    padding: 15px 100px;
+    margin: 10px;
+    border-radius: 29px;
+    cursor: pointer;
+    font-size: 23px;
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    font-family: "Nanum Gothic", sans-serif;  /*폰트*/
+}
+
+.button:hover {
+    background-color: #4E5D3A;
+}
