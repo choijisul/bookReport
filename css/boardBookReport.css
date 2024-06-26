@@ -3,14 +3,152 @@
     font-weight: 400;
     font-style: normal;
 }
+
 /*글꼴*/
 
 body {
     background-color: #E9EFDE;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    padding-top: 40px;
     margin: 0;
     font-family: Arial, sans-serif;
+}
+
+.back-button {
+    top: 60px;
+    left: 50px;
+    position: absolute;
+    background-color: transparent;
+    width: 60px;
+    border: none;
+}
+
+.back {
+    width: 100%;
+}
+
+/* 안내문구 */
+.no-reports-message {
+    color: rgb(76, 76, 76);
+    width: 100%;
+    margin-top: 60%;
+    margin-left: 130%;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.book-report {
+    font-family: "Nanum Gothic", sans-serif;
+    width: 100%;
+    height: 260px;
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.book-report:hover {
+    transform: scale(1.04);
+}
+
+.book-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-info {
+    padding-left: 15px;
+    /* text-align: center; */
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.book-authors {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    margin: 10px 20px;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-book-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.modal-book-details {
+    flex: 1;
+    text-align: left;
+}
+
+.hr {
+    border: 0px;
+    border-top: 1px solid #787878;
+}
+
+#modal-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+#modal-content {
+    margin-top: 20px;
+    margin-left: 15px;
+    font-size: 15px;
 }

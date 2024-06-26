@@ -28,26 +28,10 @@
         <!-- 독후감 작성 폼 -->
         <div class="form-container">
             <textarea id="book-report" placeholder="글을 입력하세요..."></textarea>
-            <button id="submit-report"  onClick="location.href='boardBookReport.html'">올리기</button>
+            <button id="submit-report" onClick="submitReport()">올리기</button>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
-
-            if (selectedBook) {
-                document.getElementById('book-thumbnail').src = selectedBook.thumbnail || 'default_thumbnail.png';
-                document.getElementById('book-title').textContent = selectedBook.title;
-                document.getElementById('book-authors').textContent = `저자: ${selectedBook.authors.join(', ')}`;
-
-                console.log('Book Title:', selectedBook.title);
-                console.log('Book Authors:', selectedBook.authors);
-                console.log('Book Thumbnail:', selectedBook.thumbnail);
-            } else {
-                alert('선택된 도서가 없습니다.');
-            }
-        });
-    </script>
+    <script src="./js/writeBookReport.js"></script>
 </body>
 
 </html>
