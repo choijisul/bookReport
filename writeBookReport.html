@@ -13,9 +13,41 @@
 </head>
 
 <body>
+    <button onClick="location.href='searchBook.html'" class="back-button"> <img src="./img/back.png" class="back"></button>
     <div class="container">
+        <div class="book-section">
+            <div class="book-details">
+                <img id="book-thumbnail" src="" alt="Book Thumbnail">
+                <div class="book-info">
+                    <h2 id="book-title"></h2>
+                    <p id="book-authors"></p>
+                </div>
+            </div>
+        </div>
 
+        <!-- 독후감 작성 폼 -->
+        <div class="form-container">
+            <textarea id="book-report" placeholder="글을 입력하세요..."></textarea>
+            <button id="submit-report"  onClick="location.href='boardBookReport.html'">올리기</button>
+        </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const selectedBook = JSON.parse(localStorage.getItem('selectedBook'));
+
+            if (selectedBook) {
+                document.getElementById('book-thumbnail').src = selectedBook.thumbnail || 'default_thumbnail.png';
+                document.getElementById('book-title').textContent = selectedBook.title;
+                document.getElementById('book-authors').textContent = `저자: ${selectedBook.authors.join(', ')}`;
+
+                console.log('Book Title:', selectedBook.title);
+                console.log('Book Authors:', selectedBook.authors);
+                console.log('Book Thumbnail:', selectedBook.thumbnail);
+            } else {
+                alert('선택된 도서가 없습니다.');
+            }
+        });
+    </script>
 </body>
 
 </html>

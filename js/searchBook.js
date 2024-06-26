@@ -1,5 +1,3 @@
-// js/searchBook.js
-
 const apiKey = '5a8b2df98ef0526a9a80c3aaf88353af';
 
 function searchBook() {
@@ -89,6 +87,13 @@ function displayResults(books) {
         button.textContent = '독후감 쓰러가기';
         button.classList.add('book-button');
         button.onclick = () => {
+            localStorage.setItem('selectedBook', JSON.stringify({
+                title: book.title,
+                authors: book.authors,
+                thumbnail: book.thumbnail,
+                publisher: book.publisher,
+                datetime: book.datetime
+            }));
             location.href = 'writeBookReport.html';
         };
 
